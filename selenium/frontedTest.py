@@ -17,11 +17,11 @@ class AppTest(unittest.TestCase):
 
     def test_our_app(self):
         driver = self.driver
-        driver.set_page_load_timeout(5)
-        driver.set_script_timeout(5)
+        driver.set_page_load_timeout(3)
+        driver.set_script_timeout(3)
         driver.get(application_URL)
         elem = driver.find_element(By.NAME, "name")
-        elem.send_keys("luka")
+        elem.send_keys("baka")
         elem = driver.find_element(By.NAME, "animal")
         elem.send_keys("dog")
         elem.send_keys(Keys.RETURN)
