@@ -62,7 +62,7 @@ pipeline {
             steps {
                 dir('Terraform') {                
                     git branch: 'main', url: 'https://github.com/zax75ster/terraform.git'
-                    withAWS(credentials:'AWS', region: 'us-east-1') {
+                    withAWS(credentials:'aws', region: 'us-east-1') {
                             sh 'terraform init && terraform apply -auto-approve -var-file="terraform.tfvars"'
                     } 
                 }
